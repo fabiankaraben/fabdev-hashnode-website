@@ -32,28 +32,59 @@ Ejemplo: seguimiento de anuncios
 
 ## ¿Cómo crear cookies HTTP?
 
-Desde la consola de tu navegador web, puedes configurar una cookie con JavaScript escribiendo el siguiente código:
+### En el lado del cliente
 
+Desde la consola de tu navegador web, puedes configurar una cookie con JavaScript escribiendo el siguiente código:
 
 ```javascript
 document.cookie="example=1"
 ``` 
 
-Para comprobar si tu cookie está configurada, abre la pestaña "Aplicación" y haz clic en la pestaña "Cookies" para acceder a tu nueva cookie.
+Para comprobar si tu cookie está configurada, abre la pestaña "Aplicación" y haz clic en la pestaña "Cookies" para acceder a tu nueva cookie. Deberías ver algo como lo siguiente:
+
+![cookie.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1639249624067/anNLt4o9q.png)
 
 ## Propiedades de las cookies
 
-- Cookie scope
-- Expires y Max-age
-- SameSite
+### Cookie scope
+
+El alcance de una cookie determina a qué URL se deben enviar las cookies.
+
+### `Expires` y `Max-age`
+
+Otra propiedad a considerar es la vida útil de una cookie o, más simplemente, la fecha de vencimiento de la cookie. 
+
+El atributo `Expires` eliminará una cookie en una fecha específica. Por el contrario, el atributo `Max-age` eliminará una cookie después de un período de tiempo específico.
+
+### `SameSite`
+
+Cubrimos anteriormente cómo se configuran las cookies HTTP para URL directas, pero ¿qué pasa al hacer clic en un enlace dentro de esa URL directa?
+
+Al hacer clic en un enlace dentro de una página, sus cookies se pueden enviar desde la nueva página a la que se le dirige. Aquí es donde entra en juego el atributo `SameSite`. En pocas palabras, `Samesite` especifica si las cookies se envían con solicitudes entre sitios o cada vez que hace clic en un enlace en una página determinada. 
 
 ## Tipos de cookies HTTP
 
-- Session cookies
-- First-Party cookies
-- Third-Party cookies
-- Secure cookies
-- Zombie cookies
+### Session cookies
+
+También conocidas como cookies temporales, las cookies de sesión caducan una vez que cierra o abandona el navegador. Notarás que un sitio web está utilizando cookies de sesión cuando tengas que ingresar tus credenciales de inicio de sesión cada vez que abras la página.
+
+### First-Party cookies
+
+Las cookies de origen son almacenadas directamente en tu computadora por el sitio web que estás visitando. El sitio web recopila y análisis información útil para mejorar tu experiencia de usuario.
+
+### Third-Party cookies
+
+Las cookies de terceros son creadas por dominios distintos al que accede directamente. Generalmente, se usan con fines de seguimiento, las cookies de terceros se almacenan incluso después de que se cierra el navegador. 
+
+Un caso de uso común implica el seguimiento de anuncios de sitios web distintos a los que visitas. 
+
+### Secure cookies
+
+Las cookies seguras evitan que las partes no autorizadas observen las cookies enviadas a un nuevo usuario dentro de una respuesta HTTP. Con el atributo `Secure`, las solicitudes HTTP solo incluirán la cookie si se transmiten a través de un canal seguro.
+
+### Zombie cookies
+
+Las cookies zombis son cookies que vuelven a la vida incluso cuando se eliminan o se cierra el navegador. Las cookies de Zombie se almacenan en lugares fuera del almacenamiento de cookies dedicado del navegador web. Cuando el usuario destruye una cookie, una cookie zombi puede tomar la réplica almacenada en otro lugar y adjuntarla al almacenamiento de cookies del usuario nuevamente.
 
 ## Conclusión
 
