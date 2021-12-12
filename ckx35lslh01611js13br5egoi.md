@@ -1,5 +1,7 @@
 ## Introducción a Go
 
+## ¿Qué es Go?
+
 Go (o Golang) es un lenguaje de programación moderno desarrollado originalmente por Google, el cual posee una sintaxis de alto nivel similar a los lenguajes de scripting. Es popular por su sintaxis mínima y por su manejo de concurrencia, así como por las herramientas que provee para compilar de forma nativa para múltiples plataformas.
 
 Go es un lenguaje de programación que nace de la frustración de Google. Los desarrolladores continuamente tenían que elegir entre un lenguaje que se ejecutaba eficientemente pero que demoraba un largo tiempo en compilar, o un lenguaje en el que era fácil programar pero que se ejecutaba ineficientemente en producción.
@@ -10,4 +12,44 @@ Por otra parte, Go es un lenguaje versátil ideal para ser utilizado en muchos p
 
 Go se enfoca en ayudar al desarrollador moderno a hacer más con un potente conjunto de herramientas, evitando los debates acerca del formato, ya que este forma parte de la especificación del propio lenguaje, como también logrando que los despliegues sean más sencillos compilando todo en un solo binario ejecutable.
 
-Go es fácil de aprender, con un conjunto muy pequeño de palabras clave, lo cual lo convierte en una gran opción tanto para principiantes como para desarrolladores experimentados. 
+Go es fácil de aprender, con un conjunto muy pequeño de palabras clave, lo cual lo convierte en una gran opción tanto para principiantes como para desarrolladores experimentados.
+
+Un gran dato es que Go está asociado con los lenguajes mejores pagados a nivel mundial.
+
+En esta serie nos sumergiremos en los conceptos básicos de Go, y un poco más allá, y vamos a descubrir por qué es un lenguaje tan popular.
+
+El código de Go es fácil de leer, lo que lo hace ideal para proyectos open source, ideal para el trabajo en equipo.
+
+## ¿Por qué Go?
+
+Lenguajes compilados como Go, están desarrollados para que la máquina donde se ejecuten los programas creados, puedan leer el código binario directamente, lo cual es rápido y sencillo. Lenguajes interpretados como Python y Ruby, requieren un programa por separado para ser interpretados al ejecutarse.
+
+Go fue intencionalmente desarrollado para ejecutarse en múltiples núcleos, lo cual permite el escalado al agregar más núcleos (cores). Esto también ayuda a crear programas concurrentes, ya que las goroutines se ejecutan en un segundo plano mientras otras tareas se están ejecutando.
+
+Más adelante veremos en detalle qué son las goroutines, por ahora solo hay que entender que utilizamos goroutines para ejecutar varias tareas a la vez, por ejemplo, servir datos a múltiples usuarios desde una API a la vez, sin que las solicitudes tengan que esperar que la solicitud anterior termine de procesarse.
+
+Go utiliza goroutines en lugar de hilos (threads), ya que requieren menos uso de la memoria RAM del sistema.
+
+## Ventajas de Go
+
+### Flexibilidad
+
+Este lenguaje puede solucionar una gran cantidad de problemáticas típicas. Puede ser utilizado para desarrollar soluciones de red, programas del sistema operativo, aplicaciones audio/visuales como YouTube, y la mayoría de los desarrollos modernos, como Bid Data y Machine Learning.
+
+### Documentación automática
+
+GoDoc genera automáticamente la documentación técnica a partir del código. Esto provee referencias, ejemplos del código, y enlaces al repositorio. Este es un aspecto clave en desarrollos open source y hace que sea mucho más fácil entender el código de otras personas.
+
+### Testeos integrados
+
+El lenguaje viene con una API para usar en pruebas (tests) y elaboración de perfiles, así como con sus propios ejemplos.
+
+### Detección de race condition.
+
+Cuando compiten varios subprocesos, pueden terminar completándose en un orden inesperado, lo que da como resultado errores que son difíciles de rastrear (esto se conoce como condición de carrera o race condition). Los ingenieros de Go decidieron crear un detector automático para eliminar el problema, lo que también garantiza la compatibilidad con versiones anteriores.
+
+## Desventajas de Go
+
+### Bibliotecas de interfaz gráfica (GUI)
+
+Debido a la gran popularidad de Go en entornos de servidor, el desarrollo de bibliotecas para la implementación de interfaces gráficas no es muy grande y aunque existen opciones muy interesantes, en este aspecto otros lenguajes como Python o Java llevan la delantera.
