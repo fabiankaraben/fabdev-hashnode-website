@@ -10,19 +10,19 @@ Por otra parte, Go es un lenguaje versátil ideal para ser utilizado en muchos p
 
 ![Cómo programar en Go.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1639307256505/Zt-e7E8rG.jpeg)
 
-Go se enfoca en ayudar al desarrollador moderno a hacer más con un potente conjunto de herramientas, evitando los debates acerca del formato, ya que este forma parte de la especificación del propio lenguaje, como también logrando que los despliegues sean más sencillos compilando todo en un solo binario ejecutable.
+Go se enfoca en ayudar al desarrollador moderno a hacer más con un potente conjunto de herramientas, evitando los debates acerca del formato, ya que esto forma parte de la especificación del propio lenguaje, como también logrando que los despliegues sean más sencillos compilando todo en un solo binario ejecutable.
 
 Go es fácil de aprender, con un conjunto muy pequeño de palabras clave, lo cual lo convierte en una gran opción tanto para principiantes como para desarrolladores experimentados.
 
-Un gran dato es que Go está asociado con los lenguajes mejores pagados a nivel mundial.
+El código de Go es fácil de leer, lo que lo hace ideal para proyectos open source, ideal para el trabajo en equipo.
 
 En esta serie nos sumergiremos en los conceptos básicos de Go, y un poco más allá, y vamos a descubrir por qué es un lenguaje tan popular.
 
-El código de Go es fácil de leer, lo que lo hace ideal para proyectos open source, ideal para el trabajo en equipo.
+Un gran dato extra es que Go está asociado con los lenguajes mejores pagados a nivel mundial.
 
 ## ¿Por qué Go?
 
-Lenguajes compilados como Go, están desarrollados para que la máquina donde se ejecuten los programas creados, puedan leer el código binario directamente, lo cual es rápido y sencillo. Lenguajes interpretados como Python y Ruby, requieren un programa por separado para ser interpretados al ejecutarse.
+Lenguajes compilados como Go, están desarrollados para que las máquinas donde se ejecutan los programas creados, puedan leer el código binario directamente, lo cual es rápido y sencillo. Los programas desarrollados en lenguajes interpretados como Python y Ruby, requieren un programa por separado para ser interpretados al ejecutarse.
 
 Go fue intencionalmente desarrollado para ejecutarse en múltiples núcleos, lo cual permite el escalado al agregar más núcleos (cores). Esto también ayuda a crear programas concurrentes, ya que las goroutines se ejecutan en un segundo plano mientras otras tareas se están ejecutando.
 
@@ -42,7 +42,7 @@ GoDoc genera automáticamente la documentación técnica a partir del código. E
 
 ### Testeos integrados
 
-El lenguaje viene con una API para usar en pruebas (tests) y elaboración de perfiles, así como con sus propios ejemplos.
+El lenguaje viene con una API para pruebas (tests) y elaboración de perfiles, así como con sus propios ejemplos.
 
 ### Detección de race condition.
 
