@@ -55,7 +55,7 @@ Para finalizar este paso, guarda el contenido y cierra el editor nano presionand
 
 En el siguiente paso probaremos este programa.
 
-### Paso 2: Ejecutar el programa en Go
+## Paso 2: Ejecutar el programa en Go
 
 Con el programa "¡Hola Mundo!" escrito, ahora estás listo para ejecutarlo. Para esto, utilizarás el comando `go run` seguido del nombre del archivo que acabas de crear, de esta forma:
 
