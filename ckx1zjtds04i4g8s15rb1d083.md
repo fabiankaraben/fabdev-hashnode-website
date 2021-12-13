@@ -2,6 +2,8 @@
 
 De una forma u otra, todos los días utilizamos internet e interactuamos con cookies HTTP. Las cookies HTTP permiten a las páginas web personalizar la experiencia de usuario que nos entregan. Es una funcionalidad muy útil que algunas veces simplemente se ignora o incluso se malinterpreta.
 
+%%[prueba-audio]
+
 Desde el otro lado de un sitio o aplicación web, las cookies HTTP permiten a los desarrolladores crear funcionalidades y comportamientos que se ajusten a las preferencias detectadas del usuario.
 
 Más allá de todos estos beneficios es necesario tener en cuenta algunos riesgos de seguridad relacionados con las cookies HTTP, tópico bastante escuchado en los últimos años, sobre todo entre personas que se preocupan por cada detalle en la utilización de la información personal.
