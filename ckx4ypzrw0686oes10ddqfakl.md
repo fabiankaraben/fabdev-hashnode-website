@@ -248,7 +248,7 @@ Hola, Sammy! Yo soy Go!
 
 Ahora tienes un programa Go que toma la entrada de un usuario y la vuelve a imprimir en la pantalla.
 
-### Conclusión
+## Conclusión
 
 En este tutorial, escribiste un programa "¡Hola, mundo!" y luego lo mejoraste para que tome la entrada de un usuario, procese los resultados y muestre una salida en pantalla.
 
