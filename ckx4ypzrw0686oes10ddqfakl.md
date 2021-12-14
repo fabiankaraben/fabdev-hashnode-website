@@ -82,3 +82,44 @@ Una vez compilado, el binario internamente ejecuta la instrucción correspondien
 Las comillas alrededor del texto `¡Hola Mundo!` no se imprimen, ya que estas son parte de la definición del `string`.
 
 En este paso has compilado y ejecutado un programa "¡Hola Mundo!" completo.
+
+## Paso 3: Solicitar entradas del usuario
+
+Hasta ahora, cada vez que ejecutas tu programa, produces el mismo resultado. En este paso, agregarás a tu programa la funcionalidad de solicitar al usuario su nombre, para luego utilizar su nombre en la salida.
+
+En lugar de modificar tu programa existente, crea un nuevo programa llamado `greeting.go` con el editor *nano*:
+
+```bash
+nano greeting.go
+```
+
+Primero, agrega este código, que solicita al usuario que ingrese su nombre:
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("Please enter your name.")
+}
+```
+
+Una vez más, usa la función `fmt.Println` para imprimir texto en la pantalla.
+
+Ahora agrega la línea resaltada para almacenar la entrada del usuario:
+
+```go {.line-numbers}
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("Please enter your name.")
+	var name string
+}
+```
