@@ -103,15 +103,15 @@ import (
 )
 
 func main() {
-	fmt.Println("Please enter your name.")
+	fmt.Println("Por favor, escribe tu nombre.")
 }
 ```
 
 Una vez más, usa la función `fmt.Println` para imprimir texto en la pantalla.
 
-Ahora agrega la línea resaltada para almacenar la entrada del usuario:
+Ahora agrega la línea `var name string` para almacenar la entrada del usuario:
 
-```go=
+```go
 package main
 
 import (
@@ -119,7 +119,137 @@ import (
 )
 
 func main() {
-	fmt.Println("Please enter your name.")
+	fmt.Println("Por favor, escribe tu nombre.")
 	var name string
 }
 ```
+
+La línea `var name string` creará una nueva variable utilizando la palabra clave `var`. Tú decides el nombre de la variable, pero deberá ser de tipo `string`. Luego, agrega la línea `fmt.Scanln(&name)` para capturar la entrada del usuario:
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("Por favor, escribe tu nombre.")
+	var name string
+	fmt.Scanln(&name)
+}
+```
+
+El método `fmt.Scanln` le dice a la computadora que espere la entrada del teclado que termine con una nueva línea o el carácter `\n`. Esto detiene el programa, lo que permite al usuario ingresar cualquier texto que desee. El programa continuará cuando el usuario presione la tecla *ENTER* en su teclado. Todas las pulsaciones de teclas, incluida la pulsación de tecla *ENTER*, se capturan y convierten en una cadena de caracteres. 
+
+Ahora necesitamos utilizar esos caracteres en la salida del programa, por lo que guardaremos esos caracteres escribiéndolos en la variable `string` llamada `name`. *Go* almacena esa cadena en la memoria de tu computadora hasta que el programa termine de ejecutarse. 
+
+Finalmente, agrega la línea `fmt.Printf("Hola, %s! Yoo soy Go!", name)` a tu programa para imprimir la salida:
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("Por favor, escribe tu nombre.")
+	var name string
+	fmt.Scanln(&name)
+	fmt.Printf("Hola, %s! Yoo soy Go!", name)
+}
+```
+
+Esta vez, en lugar de usar el método `fmt.Println` nuevamente, estás usando `fmt.Printf`. La función `fmt.Printf` toma una cadena y, utilizando verbos de impresión especiales, (`%s`), inyecta el valor de `name` en la cadena. Hace esto porque *Go* no admite la interpolación de cadenas, lo que te permitiría tomar el valor asignado a una variable y colocarlo dentro de una cadena.
+
+Guarda los cambios y sal de *nano* presionando *CTRL+X*, y luego *Y* cuando se te solicite guardar el archivo.
+
+Ahora ejecuta el programa. Se te pedirá tu nombre, así que ingrésalo y presiona *ENTER*.
+
+Es posible que el resultado no sea exactamente el esperado:
+
+```bash
+Por favor, escribe tu nombre.
+Sammy
+Hola Sammy
+! Yo soy Go!
+```
+
+En lugar de `Hola, Sammy! Yo soy Go !`, hay un salto de línea justo después del nombre. El programa capturó todas nuestras pulsaciones de teclas, incluida la tecla *ENTER* que presionamos para decirle al programa que continúe. En una cadena, presionar la tecla *ENTER* crea un carácter especial que crea una nueva línea. La salida del programa está haciendo exactamente lo que se le dijo que hiciera; muestra el texto que ingresaste, incluida esa nueva línea.
+
+No es lo que esperábamos que fuera el resultado, pero esto puede solucionarse con funciones adicionales.
+
+Abre el archivo `greeting.go` en tu editor y localiza esta línea en tu programa:
+
+```go
+fmt.Scanln(&name)
+```
+
+Agrega la siguiente línea inmediatamente después:
+
+```go
+name = strings.TrimSpace(name)
+```
+
+Esto usa la función `TrimSpace`, del paquete `strings` de la biblioteca estándar de Go, en la cadena que capturaste con `fmt.Scanln`. La función `strings.TrimSpace` elimina cualquier carácter de espacio, incluidas las nuevas líneas, del principio y el final de una cadena. En este caso, elimina el carácter de nueva línea al final de la cadena creada cuando presionaste *ENTER*. 
+
+Para utilizar la biblioteca `strings`, debes importarlo en la parte superior del programa. Busca estas líneas en tu programa:
+
+```go
+import (
+	"fmt"
+)
+```
+
+Agrega la siguiente línea para importar el paquete `strings`:
+
+```go
+import (
+	"fmt"
+	"strings"
+)
+```
+
+Tu programa ahora contendrá lo siguiente:
+
+```go
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	fmt.Println("Por favor, escribe tu nombre.")
+	var name string
+	fmt.Scanln(&name)
+	name = strings.TrimSpace(name)
+	fmt.Printf("Hola, %s! Yo soy Go!", name)
+}
+```
+
+Guarda y sal de *nano*. Presione *CTRL+X*, luego presione *Y*.
+
+Ejecuta el programa nuevamente:
+
+```bash
+go run greeting.go
+```
+
+Esta vez, después de ingresar tu nombre y presionar *ENTER*, obtendrás el resultado esperado:
+
+```bash
+Por favor, escribe tu nombre.
+Sammy
+Hola, Sammy! Yo soy Go!
+```
+
+Ahora tienes un programa Go que toma la entrada de un usuario y la vuelve a imprimir en la pantalla.
+
+### Conclusión
+
+En este tutorial, escribiste un programa "¡Hola, mundo!" y luego lo mejoraste para que tome la entrada de un usuario, procese los resultados y muestre una salida en pantalla.
+
+Ahora que tiene un programa básico con el que trabajar, intente expandirlo aún más. Por ejemplo, pregunta por el color favorito del usuario y haz que el programa diga que su color favorito es el rojo. Incluso podría intentar utilizar esta misma técnica para crear un programa *Mad-Lib* simple.
