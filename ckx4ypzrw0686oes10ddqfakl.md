@@ -248,6 +248,14 @@ Hola, Sammy! Yo soy Go!
 
 Ahora tienes un programa Go que toma la entrada de un usuario y la vuelve a imprimir en la pantalla.
 
+## Código del artículo
+
+Puedes encontrar el código fuente de este artículo en el siguiente repositorio de GitHub:
+
+[How to code in Go (Code)](https://github.com/fabiankaraben/how-to-code-in-go) 
+
+en el directorio `7-first-program`.
+
 ## Conclusión
 
 En este tutorial, escribiste un programa "¡Hola, mundo!" y luego lo mejoraste para que tome la entrada de un usuario, procese los resultados y muestre una salida en pantalla.
