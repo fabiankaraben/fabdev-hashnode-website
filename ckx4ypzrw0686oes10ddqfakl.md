@@ -111,7 +111,7 @@ Una vez más, usa la función `fmt.Println` para imprimir texto en la pantalla.
 
 Ahora agrega la línea resaltada para almacenar la entrada del usuario:
 
-```go {.line-numbers}
+```go=
 package main
 
 import (
