@@ -406,4 +406,4 @@ Cuando el uso de REPL es más extenso de lo esperado, o si crees que tienes un f
 
 ## Conclusión
 
-REPL es un entorno interactivo que le permite ejecutar código JavaScript sin tener que escribirlo primero en un archivo.
+REPL es un entorno interactivo que te permite ejecutar código JavaScript sin tener que escribirlo primero en un archivo.
