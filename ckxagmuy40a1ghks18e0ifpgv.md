@@ -2,11 +2,13 @@
 
 Hoy en día JavaScript ya no es solo un lenguaje de programación para hacer cositas en el navegador web, encontramos a JavaScript en desarrollo de backend (API), herramientas de consola de comandos, funciones en la nube (Cloud functions), y en muchos otros lugares.
 
+Si programaste alguna vez en JavaScript seguramente ya conocerás la función `console.log` pero posiblemente no estés aprovechando todo su potencial, e incluso puede ser que estés desaprovechando otras interesantes funciones que veremos aquí, como `console.table`, `console.time` y `console.trace`.
+
 ## Analizando `console.log`
 
-Lo primero que debes saber es cómo depurar tu código JavaScript como un profesional, y la manera de hacer esto es utilizando la función `console.log`. Pero existen buenas maneras de utilizar `console.log` y malas maneras de utilizar `console.log`. 
+Lo primero que debes saber es cómo depurar tu código JavaScript como un profesional, y la manera de hacer esto es utilizando la función `console.log`. Sin embargo, existen buenas maneras de utilizar `console.log` y malas maneras de utilizar `console.log`. 
 
-Imaginemos que tenemos tres objetos diferentes, cada uno asignado a su propia variable:
+Imaginemos que tenemos tres objetos diferentes, cada uno asignado a su propia variable, o en este caso, a su propia constante:
 
 ```javascript
 const foo    = { name: 'juan',   age: 30, nervous: false };
@@ -14,10 +16,10 @@ const bar    = { name: 'pedro',  age: 40, nervous: false };
 const baz    = { name: 'fabian', age: 50, nervous: true };
 ``` 
 
-La manera más obvia de registrar esto es una llamada a cada objeto:
+La manera más obvia de registrar esto es con una llamada a `console.log` para cada objeto:
 
 ```javascript
-// Mal código
+// Mal código 💩
 
 console.log(foo);
 console.log(bar);
@@ -28,10 +30,10 @@ Sin embargo, el problema principal es que de esta manera no podemos conocer el n
 
 ![console-log-bad.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1639696665149/1BmgW50Kx.jpeg)
 
-Existe un truco que podemos utilizar aquí llamado "nombre de las propiedades", donde agregamos las variables a un objeto. Esto no solo reduce la cantidad de líneas del código, sino que también nos dice exactamente qué variable almacena estos datos:
+Existe un truco que podemos utilizar aquí, donde agregamos las variables a un objeto. Esto no solo reduce la cantidad de líneas del código, sino que también nos dice exactamente qué variable almacena cada dato:
 
 ```javascript
-// Buen código
+// Buen código ✅
 
 console.log({ foo, bar, baz });
 ``` 
@@ -42,10 +44,10 @@ Ahora la consola se ve así:
 
 ## Analizando `console.table`
 
-Algo que tal vez notaste es que todos los objetos comparten propiedades, entonces esto es ideal para visualizarlo como una tabla:
+Algo que tal vez notaste es que todos los objetos comparten propiedades, y lo ideal en estos casos es visualizar los datos como una tabla:
 
 ```javascript
-// Buen código
+// Buen código ✅
 
 console.table([foo, bar, baz]);
 ``` 
@@ -54,9 +56,9 @@ La salida será la siguiente:
 
 ![console-log-good-table.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1639700059073/uIQoxC58r.jpeg)
 
-Esto es algo muy útil cuando tienes un array de objetos, o como en el ejemplo, solo hay que definir un array que contenga los objetos individuales.
+Esto es algo muy útil cuando tienes un array de objetos, o si tienes variables sueltas como en el ejemplo, solo tienes definir un array que contenga los objetos individuales.
 
-Realmente existen muchas posibilidades para el registro en consola, sin embargo, veamos solamente un par de esas posibilidades.
+Realmente existen muchas posibilidades para el registro en consola, sin embargo, veamos un par de esas posibilidades.
 
 ## Analizando `console.time`
 
