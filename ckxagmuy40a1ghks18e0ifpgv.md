@@ -116,3 +116,8 @@ Al ejecutar esto, en la consola veremos:
 ## Conclusión
 
 La función `console.log` es muy útil pero muchas veces no aprovechamos todo su potencial y lamentablemente mucha gente directamente desconoce la existencia de otras funciones interesantes como `console.table`, `console.time` y `console.trace` con las que podemos ahorrar bastante tiempo de trabajo.
+
+**Fuentes:**
+- [JavaScript Pro Tips - Code This, NOT That](https://www.youtube.com/watch?v=Mus_vwhTCq0)
+- [Do THIS to Write Clean Code! | JavaScript Pro Tips (2021)](https://www.youtube.com/watch?v=ZI3q-_vjSZE)
+- [Junior Vs Senior Code - How To Write Better Code](https://www.youtube.com/watch?v=g2nMKzhkvxw)
