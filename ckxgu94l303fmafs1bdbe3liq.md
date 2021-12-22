@@ -80,11 +80,9 @@ BubblyButton(
 
 ## Live demo of BubblyButton on Flutter
 
-By clicking on the following link, you can see BubblyButton in action:
+Here, you can see the BubblyButton in action:
 
-[BubblyButton en Flutter](https://css-to-flutter.fabdev.win/1-bubbly-button/)
-
-#[https://codepen.io/fabiankaraben/pen/YzrrZME]
+%[https://codepen.io/fabiankaraben/pen/YzrrZME]
 
 ## Flutter code of BubblyButton
 
